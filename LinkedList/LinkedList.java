@@ -10,8 +10,19 @@ public class LinkedList<T>{
         size++;
     }
 
+
     public void add(T value){
-        throw new UnsupportedOperationException("Add is not working yet");
+
+        Node<T> actual = root;
+
+        while (actual != null) {
+            
+            if(actual.next == null)
+                actual.next = new Node<T>(value);
+            
+            actual = actual.next;
+        }
+
     }
 
     public void remove(T value){
