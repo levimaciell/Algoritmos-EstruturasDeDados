@@ -26,11 +26,26 @@ public class LinkedList<T>{
     }
 
     public void remove(T value){
-        throw new UnsupportedOperationException("Remove is not working yet");
-    }
+
+        Node<T> actual = root;
+
+        while (actual != null) {
+            
+            if(actual.next.val == value){
+                actual.next = actual.next.next;
+                break;
+            }
+                
+            
+            actual = actual.next;
+        }
+
+}
 
     public T get(){
         throw new UnsupportedOperationException("Get is not working yet");
     }
+
+    //Get All
 
 }
