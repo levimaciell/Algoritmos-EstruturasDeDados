@@ -42,8 +42,20 @@ public class LinkedList<T>{
 
 }
 
-    public T get(){
-        throw new UnsupportedOperationException("Get is not working yet");
+    public Node<T> get(T value){
+
+        Node<T> actual = root;
+
+        while (actual != null) {
+            
+            if(actual.val == value){
+                return actual;
+            }
+                 
+            actual = actual.next;
+        }
+
+        return null;
     }
 
     //Get All
