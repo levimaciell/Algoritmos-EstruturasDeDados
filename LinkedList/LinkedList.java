@@ -58,6 +58,10 @@ public class LinkedList<T>{
         return null;
     }
 
+    public Node<T> getFirst(){
+        return root;
+    }
     //Get All
+    //Get Last
 
 }
